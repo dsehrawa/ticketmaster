@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -30,6 +31,7 @@ public class CinemaHall {
     @OneToMany(mappedBy = "cinemaHall", fetch = FetchType.LAZY)
     private Set<CinemaSeat> cinemaSeats;
 
-    @OneToOne(mappedBy = "cinemaHall")
-    private MovieShow movieShow;
+    @JsonIgnore
+    @OneToMany(mappedBy = "cinemaHall", fetch = FetchType.LAZY)
+    private List<MovieShow> movieShows;
 }

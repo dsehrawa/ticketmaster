@@ -82,7 +82,7 @@ insert into ticketmaster.cinema_seat values(40,5,1,8);
 insert into ticketmaster.movie values(1,'Bell Bottom','Amongst multiple heinous airplane hijacks, India was made to face another such challenge in 1984.','3h', 'Hindi', '2021-08-31', 'India', 'Action');
 insert into ticketmaster.movie values(2,'Fast and Furious 9','Dom`s peaceful life with his wife Letty and son Brian is shattered when Dom`s past catches up to him.','2h', 'English', '2021-08-12', 'USA', 'Action');
 
-/*Create show timing for Movie-1*/
+/* create show timing for Vasant Kunj */
 insert into ticketmaster.movie_show values(1, '2021-08-31', '2021-08-31 11:00:00', '2021-08-31 14:00:00', 1, 1);
 insert into ticketmaster.movie_show values(2, '2021-08-31', '2021-08-31 10:00:00', '2021-08-31 12:00:00', 1, 2);
 insert into ticketmaster.movie_show values(3, '2021-08-31', '2021-08-31 11:00:00', '2021-08-31 14:00:00', 2, 1);
@@ -93,7 +93,7 @@ insert into ticketmaster.movie_show values(6, '2021-08-31', '2021-08-31 10:00:00
 insert into ticketmaster.movie_show values(7, '2021-08-31', '2021-08-31 11:00:00', '2021-08-31 14:00:00', 4, 1);
 insert into ticketmaster.movie_show values(8, '2021-08-31', '2021-08-31 10:00:00', '2021-08-31 12:00:00', 4, 2);
 
-/*Create show timing for Movie-2*/
+/* create show timing for Saket */
 insert into ticketmaster.movie_show values(9, '2021-08-31', '2021-08-31 11:00:00', '2021-08-31 14:00:00', 5, 1);
 insert into ticketmaster.movie_show values(10, '2021-08-31', '2021-08-31 10:00:00', '2021-08-31 12:00:00', 5, 2);
 insert into ticketmaster.movie_show values(11, '2021-08-31', '2021-08-31 11:00:00', '2021-08-31 14:00:00', 6, 1);

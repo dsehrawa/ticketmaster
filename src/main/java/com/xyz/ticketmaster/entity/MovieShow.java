@@ -1,5 +1,6 @@
 package com.xyz.ticketmaster.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
@@ -22,8 +23,9 @@ public class MovieShow {
     private int cinemaHallID;
     private int movieID;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(insertable = false, updatable = false, name = "cinemaHallID", referencedColumnName = "cinemaHallID")
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(insertable = false, updatable = false, name = "cinemaHallID")
     private CinemaHall cinemaHall;
 
     @JsonIgnoreProperties

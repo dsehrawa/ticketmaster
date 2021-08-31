@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -20,7 +20,7 @@ public class Movie {
     private String description;
     private String duration;
     private String language;
-    private LocalDateTime releaseDate;
+    private LocalDate releaseDate;
     private String country;
     private String genre;
 
