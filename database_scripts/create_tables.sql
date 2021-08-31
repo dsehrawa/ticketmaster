@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.movie(
   genre varchar(20)
 );
 
-CREATE TABLE IF NOT EXISTS ticketmaster.show(
+CREATE TABLE IF NOT EXISTS ticketmaster.movie_show(
   showID int primary key,
   date datetime,
   startTime datetime,
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.booking(
   userID int,
   showID int,
   FOREIGN KEY (userID) REFERENCES ticketmaster.user (userID),
-  FOREIGN KEY (showID) REFERENCES ticketmaster.show (showID)  
+  FOREIGN KEY (showID) REFERENCES ticketmaster.movie_show (showID)
 );
 
 CREATE TABLE IF NOT EXISTS ticketmaster.show_seat(
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.show_seat(
   showID int,
   bookingID int,
   FOREIGN KEY (cinemaSeatID) REFERENCES ticketmaster.cinema_seat (cinemaSeatID),
-  FOREIGN KEY (showID) REFERENCES ticketmaster.show (showID),
+  FOREIGN KEY (showID) REFERENCES ticketmaster.movie_show (showID),
   FOREIGN KEY (bookingID) REFERENCES ticketmaster.booking (bookingID) 
 ); 
 

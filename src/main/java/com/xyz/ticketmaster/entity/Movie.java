@@ -1,17 +1,16 @@
 package com.xyz.ticketmaster.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "movie")
 public class Movie {
@@ -24,4 +23,8 @@ public class Movie {
     private LocalDateTime releaseDate;
     private String country;
     private String genre;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "movie", fetch = FetchType.LAZY)
+    private Set<MovieShow> movieShows;
 }

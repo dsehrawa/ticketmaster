@@ -1,16 +1,14 @@
 package com.xyz.ticketmaster.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "cinema_seat")
 public class CinemaSeat {
@@ -20,4 +18,10 @@ public class CinemaSeat {
     private int seatNumber;
     private int type;
     private int cinemaHallID;
+
+    @JsonIgnoreProperties
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(insertable = false, updatable = false, name = "cinemaHallID")
+    private CinemaHall cinemaHall;
+
 }
