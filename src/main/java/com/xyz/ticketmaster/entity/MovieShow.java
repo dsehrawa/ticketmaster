@@ -1,7 +1,6 @@
 package com.xyz.ticketmaster.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,7 +31,7 @@ public class MovieShow {
     @JoinColumn(insertable = false, updatable = false, name = "cinemaHallID")
     private CinemaHall cinemaHall;
 
-    @JsonIgnoreProperties
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(insertable = false, updatable = false, name = "movieID")
     private Movie movie;

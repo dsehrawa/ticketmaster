@@ -1,6 +1,6 @@
 package com.xyz.ticketmaster.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,7 +19,7 @@ public class CinemaSeat {
     private int type;
     private int cinemaHallID;
 
-    @JsonIgnoreProperties
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(insertable = false, updatable = false, name = "cinemaHallID")
     private CinemaHall cinemaHall;
