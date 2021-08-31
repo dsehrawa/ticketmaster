@@ -35,14 +35,14 @@ CREATE TABLE IF NOT EXISTS ticketmaster.movie(
   description varchar(512),
   duration varchar(512),
   language varchar(16),
-  releaseDate datetime,
+  releaseDate date,
   country varchar(64),
   genre varchar(20)
 );
 
 CREATE TABLE IF NOT EXISTS ticketmaster.movie_show(
   showID int primary key,
-  date datetime,
+  date date,
   startTime datetime,
   endtime datetime,
   cinemaHallID int,

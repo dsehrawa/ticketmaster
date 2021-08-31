@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/cities")
+@RequestMapping("/ticketmaster/api/v1/cities")
 public class CityController {
 
     @Autowired
