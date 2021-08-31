@@ -44,11 +44,11 @@ insert into ticketmaster.cinema_seat values(14,4,1,3);
 insert into ticketmaster.cinema_seat values(15,5,1,3);
 
 /* Create Seat for Inox Vasant Kunj Hall-2*/
-insert into ticketmaster.cinema_seat values(16,6,1,4);
-insert into ticketmaster.cinema_seat values(17,7,1,4);
-insert into ticketmaster.cinema_seat values(18,8,1,4);
-insert into ticketmaster.cinema_seat values(19,9,1,4);
-insert into ticketmaster.cinema_seat values(20,10,1,4);
+insert into ticketmaster.cinema_seat values(16,1,1,4);
+insert into ticketmaster.cinema_seat values(17,2,1,4);
+insert into ticketmaster.cinema_seat values(18,3,1,4);
+insert into ticketmaster.cinema_seat values(19,4,1,4);
+insert into ticketmaster.cinema_seat values(20,5,1,4);
 
 /* Create Seat for Carnival Saket Hall-1*/
 insert into ticketmaster.cinema_seat values(21,1,1,5);
@@ -72,11 +72,11 @@ insert into ticketmaster.cinema_seat values(34,4,1,7);
 insert into ticketmaster.cinema_seat values(35,5,1,7);
 
 /* Create Seat for Miraj Saket Hall-2*/
-insert into ticketmaster.cinema_seat values(36,6,1,8);
-insert into ticketmaster.cinema_seat values(37,7,1,8);
-insert into ticketmaster.cinema_seat values(38,8,1,8);
-insert into ticketmaster.cinema_seat values(39,9,1,8);
-insert into ticketmaster.cinema_seat values(40,10,1,8);
+insert into ticketmaster.cinema_seat values(36,1,1,8);
+insert into ticketmaster.cinema_seat values(37,2,1,8);
+insert into ticketmaster.cinema_seat values(38,3,1,8);
+insert into ticketmaster.cinema_seat values(39,4,1,8);
+insert into ticketmaster.cinema_seat values(40,5,1,8);
 
 
 /* Create data for Movies*/
