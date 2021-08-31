@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.movie(
   movieID int primary key,
   title varchar(256),
   description varchar(512),
-  duration datetime,
+  duration varchar(512),
   language varchar(16),
   releaseDate datetime,
   country varchar(64),
