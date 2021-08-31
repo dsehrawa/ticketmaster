@@ -1,6 +1,6 @@
 package com.xyz.ticketmaster.service;
 
-import com.xyz.ticketmaster.entity.MovieShow;
+import com.xyz.ticketmaster.dto.MovieShowView;
 import com.xyz.ticketmaster.repository.MovieShowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class MovieShowService {
     @Autowired
     private MovieShowRepository movieShowRepository;
 
-    public List<MovieShow> getByMovieIdAndShowDate(int movieID, LocalDate showDate) {
+    public List<MovieShowView> getByMovieIdAndShowDate(int movieID, LocalDate showDate) {
         return movieShowRepository.findByMovieIDAndDate(movieID, showDate);
     }
 }

@@ -1,6 +1,6 @@
 package com.xyz.ticketmaster.controller;
 
-import com.xyz.ticketmaster.entity.MovieShow;
+import com.xyz.ticketmaster.dto.MovieShowView;
 import com.xyz.ticketmaster.service.MovieShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -18,9 +18,9 @@ public class MovieShowController {
     @Autowired
     private MovieShowService movieShowService;
 
-    @GetMapping("/filter")
-    public List<MovieShow> getShows(@RequestParam("movieID") int movieID,
-                                    @RequestParam("showDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate showDate) {
+    @GetMapping()
+    public List<MovieShowView> getShows(@RequestParam("movieID") int movieID,
+                                        @RequestParam("showDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate showDate) {
 
         return movieShowService.getByMovieIdAndShowDate(movieID, showDate);
     }
