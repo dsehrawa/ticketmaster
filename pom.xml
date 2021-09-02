@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.xyz</groupId>
 	<artifactId>ticketmaster</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>ticketmaster</name>
 	<description>ticketmaster</description>
 	<properties>
@@ -55,6 +55,25 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.13</version>
+				<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<repository>xyz/ticketmaster</repository>
+					<tag>${project.version}</tag>
+					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
 			</plugin>
 		</plugins>
