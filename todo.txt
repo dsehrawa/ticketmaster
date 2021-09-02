@@ -1,6 +1,10 @@
+- UT
+- Design doc
+
+- Add Coupon Support
 - Add Payment REST API to complete the booking
 - Add Logging
 - Add pagination Support to add REST APIs
-- Add Iteration to get Result from DB
+- Add Iterator to get Result from DB
 - Add Swagger
-- Remove hard coding of DB IP Address from Docker file
+- Remove hard coding of MySql Server IP Address from Docker file
