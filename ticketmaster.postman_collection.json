@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "2c106b53-4cf7-4e53-a45c-ce03c7099d80",
+		"name": "ticketmaster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Movies By city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/ticketmaster/api/v1/cities/Vasant Kunj%2C New Delhi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ticketmaster",
+						"api",
+						"v1",
+						"cities",
+						"Vasant Kunj%2C New Delhi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shows By Movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movieID",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "showDate",
+							"value": "2021-08-31",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/ticketmaster/api/v1/shows",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ticketmaster",
+						"api",
+						"v1",
+						"shows"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
