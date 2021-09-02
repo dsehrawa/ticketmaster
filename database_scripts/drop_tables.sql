@@ -1,5 +1,6 @@
 DROP TABLE ticketmaster.payment;
 DROP TABLE ticketmaster.show_seat;
+DROP TABLE ticketmaster.pre_booking;
 DROP TABLE ticketmaster.booking;
 DROP TABLE ticketmaster.user;
 DROP TABLE ticketmaster.movie_show;

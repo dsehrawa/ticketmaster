@@ -103,3 +103,21 @@ insert into ticketmaster.movie_show values(13, '2021-08-31', '2021-08-31 11:00:0
 insert into ticketmaster.movie_show values(14, '2021-08-31', '2021-08-31 10:00:00', '2021-08-31', 7, 2);
 insert into ticketmaster.movie_show values(15, '2021-08-31', '2021-08-31 11:00:00', '2021-08-31', 8, 1);
 insert into ticketmaster.movie_show values(16, '2021-08-31', '2021-08-31 10:00:00', '2021-08-31', 8, 2);
+
+/* Create data for Users */
+insert into ticketmaster.user values(1,'Dheeraj','lS95rCy5II9BolqiBAv2TQ==','dheerajkumar@gmail.com','9822579334');
+insert into ticketmaster.user values(2,'Neeraj','mm78rCy5II9BalqiBNv2TQ==','nirajyadav@gmail.com','7022579355');
+
+/* Create show_seat */
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(1,0,1200,1,1);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(2,0,1200,2,1);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(3,0,1200,3,1);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(4,0,1200,4,1);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(5,0,1200,5,1);
+
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(6,0,900,6,3);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(7,0,900,7,3);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(8,0,900,8,3);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(9,0,900,9,3);
+insert into ticketmaster.show_seat(showSeatID,status,price,cinemaSeatID,showID) values(10,0,900,10,3);
+

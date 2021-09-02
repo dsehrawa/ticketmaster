@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.movie_show(
 CREATE TABLE IF NOT EXISTS ticketmaster.user(
   userID int primary key,
   name varchar(64),
-  password varchar(20),
+  password varchar(512),
   email varchar(512),
   phone varchar(16)
 );
@@ -92,3 +92,14 @@ CREATE TABLE IF NOT EXISTS ticketmaster.payment(
   bookingID int,
   FOREIGN KEY (bookingID) REFERENCES ticketmaster.booking (bookingID) 
 );
+
+CREATE TABLE ticketmaster.pre_booking (
+  cinemaSeatID int,
+  showID int,
+  userID int,
+  FOREIGN KEY (userID) REFERENCES ticketmaster.user (userID),
+  FOREIGN KEY (cinemaSeatID) REFERENCES ticketmaster.cinema_seat (cinemaSeatID),
+  FOREIGN KEY (showID) REFERENCES ticketmaster.movie_show (showID)
+);
+
+CREATE UNIQUE INDEX uniq_pre_booking ON pre_booking (cinemaSeatID, showID);
