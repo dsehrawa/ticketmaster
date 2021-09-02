@@ -2,7 +2,7 @@ package com.xyz.ticketmaster.booking;
 
 import com.xyz.ticketmaster.api.TheatreProxy;
 import com.xyz.ticketmaster.exception.SeatNotAvailable;
-import com.xyz.ticketmaster.model.OnBoardingStrategy;
+import com.xyz.ticketmaster.common.OnBoardingStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

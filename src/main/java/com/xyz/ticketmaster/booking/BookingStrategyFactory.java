@@ -1,7 +1,7 @@
 package com.xyz.ticketmaster.booking;
 
 import com.xyz.ticketmaster.exception.InvalidOnBoardingStrategyException;
-import com.xyz.ticketmaster.model.OnBoardingStrategy;
+import com.xyz.ticketmaster.common.OnBoardingStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

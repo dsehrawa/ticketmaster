@@ -1,13 +1,12 @@
-package com.xyz.ticketmaster.model;
+package com.xyz.ticketmaster.common;
 
-public enum SeatStatus {
-    FREE(0),
+public enum BookingStatus {
     RESERVED(1),
     BOOKED(2);
 
     private int value;
 
-    SeatStatus(int value) {
+    BookingStatus(int value) {
         this.value = value;
     }
 

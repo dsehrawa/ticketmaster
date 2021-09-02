@@ -7,10 +7,11 @@ import com.xyz.ticketmaster.dto.BookingDTO;
 import com.xyz.ticketmaster.entity.Booking;
 import com.xyz.ticketmaster.entity.ShowSeat;
 import com.xyz.ticketmaster.exception.SeatNotAvailable;
-import com.xyz.ticketmaster.model.BookingStatus;
-import com.xyz.ticketmaster.model.OnBoardingStrategy;
-import com.xyz.ticketmaster.model.SeatStatus;
+import com.xyz.ticketmaster.common.BookingStatus;
+import com.xyz.ticketmaster.common.OnBoardingStrategy;
+import com.xyz.ticketmaster.common.SeatStatus;
 import com.xyz.ticketmaster.repository.BookingRepository;
+import com.xyz.ticketmaster.repository.CinemaRepository;
 import com.xyz.ticketmaster.repository.ShowSeatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,9 +31,14 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     private BookingRepository bookingRepository;
 
+    @Autowired
+    private CinemaRepository cinemaRepository;
+
 
     private void lockSeats(BookingDTO bookingDTO) throws SeatNotAvailable {
-        BookingStrategyFactory.getBookingStrategy(OnBoardingStrategy.RESERVED).lockSeats(bookingDTO.getShowID(),
+        OnBoardingStrategy onBoardingStrategy =
+                OnBoardingStrategy.fromValue(cinemaRepository.findById(bookingDTO.getCinemaID()).get().getOnBoardingStrategy());
+        BookingStrategyFactory.getBookingStrategy(onBoardingStrategy).lockSeats(bookingDTO.getShowID(),
                 bookingDTO.getCinemaSeatIDs());
     }
 

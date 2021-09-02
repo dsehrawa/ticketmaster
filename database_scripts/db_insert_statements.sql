@@ -3,11 +3,11 @@ insert into ticketmaster.city values(1, 'Vasant Kunj, New Delhi', 'Delhi', 11007
 insert into ticketmaster.city values(2, 'Saket, New Delhi', 'Delhi', 110071);
 
 /* create cinema for Vasant Kunj */
-insert into ticketmaster.cinema values(1, 'PVR', 2, 1);
-insert into ticketmaster.cinema values(2, 'Inox', 2, 1);
+insert into ticketmaster.cinema values(1, 'PVR', 2, 1, 1);
+insert into ticketmaster.cinema values(2, 'Inox', 2, 1, 1);
 /* create cinema for Saket */
-insert into ticketmaster.cinema values(3, 'Carival', 2, 2);
-insert into ticketmaster.cinema values(4, 'Miraj', 2, 2);
+insert into ticketmaster.cinema values(3, 'Carival', 2, 1, 2);
+insert into ticketmaster.cinema values(4, 'Miraj', 2, 1, 2);
 
 /* create cinema Hall for Vasant Kunj */
 insert into ticketmaster.cinema_hall values(1, 'Ganga', 5, 1);

@@ -11,5 +11,6 @@ import java.util.List;
 public class BookingDTO {
     private int numberOfSeats;
     private int showID;
+    private int cinemaID;
     private List<Integer> cinemaSeatIDs = new ArrayList<>();
 }

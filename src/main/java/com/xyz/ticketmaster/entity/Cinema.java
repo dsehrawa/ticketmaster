@@ -18,6 +18,7 @@ public class Cinema {
     private int cinemaID;
     private String name;
     private int totalCienaHalls;
+    private int onBoardingStrategy;
     private int cityID;
 
     @JsonIgnore

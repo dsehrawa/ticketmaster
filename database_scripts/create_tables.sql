@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.cinema(
   cinemaID int primary key,
   name varchar(64),
   totalCienaHalls int,
+  onBoardingStrategy int,
   cityID int,
   FOREIGN KEY (cityID) REFERENCES ticketmaster.city (cityID)
 );
