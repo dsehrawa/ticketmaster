@@ -60,9 +60,9 @@ CREATE TABLE IF NOT EXISTS ticketmaster.user(
 );
 
 CREATE TABLE IF NOT EXISTS ticketmaster.booking(
-  bookingID int primary key,
+  bookingID int AUTO_INCREMENT primary key,
   numberOfSeats int,
-  timeStamp datetime,
+  bookingTime TIMESTAMP,
   status int,
   userID int,
   showID int,
@@ -94,6 +94,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.payment(
 );
 
 CREATE TABLE ticketmaster.pre_booking (
+  preBookingId int AUTO_INCREMENT primary key,
   cinemaSeatID int,
   showID int,
   userID int,

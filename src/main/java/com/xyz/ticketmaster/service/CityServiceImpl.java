@@ -1,5 +1,6 @@
 package com.xyz.ticketmaster.service;
 
+import com.xyz.ticketmaster.api.CityService;
 import com.xyz.ticketmaster.entity.Cinema;
 import com.xyz.ticketmaster.entity.CinemaHall;
 import com.xyz.ticketmaster.entity.City;
@@ -8,19 +9,17 @@ import com.xyz.ticketmaster.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
-public class CityService {
+public class CityServiceImpl implements CityService {
 
     @Autowired
     private CityRepository cityRepository;
 
+    @Override
     public Set<Movie> getMoviesByCity(String cityName) {
         Set<Movie> movieList = new HashSet<>();
         City retCity

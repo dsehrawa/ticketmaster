@@ -1,7 +1,7 @@
 package com.xyz.ticketmaster.controller;
 
+import com.xyz.ticketmaster.api.MovieShowService;
 import com.xyz.ticketmaster.dto.MovieShowView;
-import com.xyz.ticketmaster.service.MovieShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
