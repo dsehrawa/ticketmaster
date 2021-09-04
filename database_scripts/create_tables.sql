@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS ticketmaster.city(
   cityID int primary key,
-  name varchar(64),
-  state varchar(64),
+  name varchar(256),
+  state varchar(256),
   zipCode varchar(16)
 );
 
 CREATE TABLE IF NOT EXISTS ticketmaster.cinema(
   cinemaID int primary key,
-  name varchar(64),
+  name varchar(256),
   totalCienaHalls int,
   onBoardingStrategy int,
   cityID int,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS ticketmaster.cinema(
 
 CREATE TABLE IF NOT EXISTS ticketmaster.cinema_hall(
   cinemaHallID int primary key,
-  name varchar(64),
+  name varchar(256),
   totalSeats int,
   cinemaID int,
   FOREIGN KEY (cinemaID) REFERENCES ticketmaster.cinema (cinemaID)
