@@ -4,6 +4,6 @@ import com.xyz.ticketmaster.entity.Movie;
 
 import java.util.Set;
 
-public interface CityService {
+public interface MovieService {
     Set<Movie> getMoviesByCity(String cityName);
 }

@@ -1,6 +1,6 @@
 package com.xyz.ticketmaster.service;
 
-import com.xyz.ticketmaster.api.CityService;
+import com.xyz.ticketmaster.api.MovieService;
 import com.xyz.ticketmaster.entity.Cinema;
 import com.xyz.ticketmaster.entity.CinemaHall;
 import com.xyz.ticketmaster.entity.City;
@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-public class CityServiceImpl implements CityService {
+public class MovieServiceImpl implements MovieService {
 
     @Autowired
     private CityRepository cityRepository;

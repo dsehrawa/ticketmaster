@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "1ff8f314-ff4e-4366-8d76-ca4e7d6339a6",
-		"name": "ticketmaster Copy",
+		"name": "ticketmaster",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9090/ticketmaster/api/v1/cities/Vasant Kunj%2C New Delhi",
+					"raw": "http://localhost:9090/ticketmaster/api/v1/movies/Vasant Kunj%2C New Delhi",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -21,7 +21,7 @@
 						"ticketmaster",
 						"api",
 						"v1",
-						"cities",
+						"movies",
 						"Vasant Kunj%2C New Delhi"
 					]
 				}
@@ -69,7 +69,7 @@
 			"response": []
 		},
 		{
-			"name": "Create Booking",
+			"name": "Booking Tickets",
 			"request": {
 				"method": "POST",
 				"header": [],
