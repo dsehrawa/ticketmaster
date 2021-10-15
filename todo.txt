@@ -1,10 +1,11 @@
+- Move to PostgresQL DB
+- Run it on a public cloud
+- Add Swagger
+- Add Logging
 - UT
-- Design doc
+- Add pagination Support to add REST APIs
+- Add Iterator to get Result from DB
+- Remove hard coding of DB Server IP Address from Docker file
 
 - Add Coupon Support
 - Add Payment REST API to complete the booking
-- Add Logging
-- Add pagination Support to add REST APIs
-- Add Iterator to get Result from DB
-- Add Swagger
-- Remove hard coding of MySql Server IP Address from Docker file
